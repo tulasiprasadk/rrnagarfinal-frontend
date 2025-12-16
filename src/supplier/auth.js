@@ -1,12 +1,13 @@
 // frontend/src/supplier/auth.js
 import axios from "axios";
+import { API_BASE } from "../api/client";
 
 /**
  * Request OTP for supplier login
  */
 export async function requestOtp({ email, phone }) {
   try {
-    const response = await axios.post("/api/suppliers/request-otp", {
+    const response = await axios.post(`${API_BASE}/suppliers/request-otp`, {
       email,
       phone,
     });
@@ -21,7 +22,7 @@ export async function requestOtp({ email, phone }) {
  */
 export async function verifyOtp({ email, phone, otp }) {
   try {
-    const response = await axios.post("/api/suppliers/verify-otp", {
+    const response = await axios.post(`${API_BASE}/suppliers/verify-otp`, {
       email,
       phone,
       otp,
@@ -45,7 +46,7 @@ export async function verifyOtp({ email, phone, otp }) {
  */
 export async function loginSupplier({ phone, email }) {
   try {
-    const response = await axios.post("/api/suppliers/login", {
+    const response = await axios.post(`${API_BASE}/suppliers/login`, {
       phone: phone || email,
     });
     
