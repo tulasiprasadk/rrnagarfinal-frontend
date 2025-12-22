@@ -1,4 +1,4 @@
-// Simple emoji and Kannada mapping for common crackers
+// Emoji and Kannada mapping for common crackers
 const crackerInfo = {
   "Sparklers": { emoji: "✨", kn: "ಸ್ಪಾರ್ಕ್ಲರ್ಸ್" },
   "Flowerpot": { emoji: "🏵️", kn: "ಫ್ಲವರ್ ಪಾಟ್" },
@@ -29,15 +29,15 @@ export default function Crackers() {
           style={{
             display: "flex",
             minHeight: "100vh",
-            background: "#FFF8E1" // soft yellow background (site-friendly)
+            background: "#FFF8E1"
           }}
         >
-          {/* LEFT: PRODUCTS */}
+          {/* Products */}
           <div style={{ flex: 1, padding: "24px 32px" }}>
             <h1
               style={{
                 marginBottom: 8,
-                color: "#C8102E" // Karnataka red
+                color: "#C8102E"
               }}
             >
               🎆 RRNAGAR Crackers
@@ -93,7 +93,7 @@ export default function Crackers() {
               </div>
             ))}
           </div>
-          {/* RIGHT: CART */}
+          {/* Cart */}
           <CartPanel />
         </div>
       </CrackerCartProvider>
